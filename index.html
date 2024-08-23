@@ -9,7 +9,7 @@
   <body>
     <a-scene id="scene" background="color: #4080e0" renderer="colorManagement: true">
         <!-- カメラとカーソルの設定 -->
-        <a-entity camera look-controls>
+        <a-entity camera look-controls wasd-controls>
           <!-- カーソル設定 -->
           <a-entity cursor="fuse: true;" 
                     position="0 0 -1"
@@ -18,16 +18,32 @@
           </a-entity>
       </a-entity>
 
+      <!-- <a-assets timeout="10000">
+        <a-asset-item id="base" src="../gltf/YasakaShrine.glb"></a-asset-item>
+      </a-assets>
+      <a-entity  id="shrine-model" gltf-model="#base" position="-4.25 -3.3 -4.6" scale="0.5 0.5 0.5" rotation="0 90 0"></a-entity> -->
+
       <!-- 写真を使ったリンク -->
       <a-image id="linkImage" src="./img/YasakaShrine.jpg" 
                position="-4.25 0.5 -4.8" 
                width="2.5" height="1.5">
       </a-image>
 
+      <a-image  id="linkImage2" src="./img/hani.jpg" 
+                position="1.6 0.5 -0.3"
+                width="2.5" height="1.5">
+      </a-image>
+
       <a-cone color = "tomato"  
               radius-bottom = "0"  
               radius-top = "0.3"
               position="-4.25 -2.5 -4.8">
+      </a-cone>
+
+      <a-cone color = "tomato"  
+        radius-bottom = "0"  
+        radius-top = "0.3"
+        position="1.6 -2.5 -0.3">
       </a-cone>
       
       <a-image src="../img/map1.jpg" 
@@ -46,6 +62,16 @@
       color="#000">
       </a-text>
 
+      <a-text
+      value="ハニー公園"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="0.8 2 -0.3"
+      color="#000">
+      </a-text>
+
       <!-- <a-plane position="-4.25 2 -4.8"  rotation="0 0 0" width="1" height="0.5" color="#FFF">
         <a-text value="八坂神社" align="center" color="#000" width="4" font="noto-sans-cjk-jp-msdf.json" font-image="noto-sans-cjk-jp-msdf.png"></a-text>
       </a-plane> -->
@@ -56,6 +82,14 @@
           document.querySelector('#linkImage').addEventListener('click', function () {
               window.location.href = "./VR/YasakaShrine1.html";
           });
+
+          document.querySelector('#linkImage2').addEventListener('click', function () {
+              window.location.href = "./VR/hani.html";
+          });
+
+          // document.querySelector('#shrine-model').addEventListener('click', function () {
+          //     window.location.href = "./AR/YasakaShrine.html";
+          // });
       </script>
   </a-scene>
 </body>
