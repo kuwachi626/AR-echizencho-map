@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>HakusanShrine VR</title>
     <meta name="description" content="360° Image - A-Frame">
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
   <body>
-    <a-scene background="color: gray">
+    <a-scene id="scene" background="color: #4080e0" renderer="colorManagement: true">
         <!-- カメラとカーソルの設定 -->
         <a-entity camera look-controls>
           <!-- カーソル設定 -->
@@ -15,17 +15,40 @@
                     position="0 0 -1"
                     geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
                     material="color: blue; shader: flat">
-                    <a-animation begin="click" easing="ease-in" attribute="scale" dur="150"
-                    fill="forwards" from="0.1 0.1 0.1" to="1 1 1"></a-animation>
-                    <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" dur="1500"
-                    fill="backwards" from="1 1 1" to="0.1 0.1 0.1"></a-animation>
           </a-entity>
       </a-entity>
 
       <!-- 写真を使ったリンク -->
-      <a-image id="linkImage" src="./img/HakusanShrine.jpg" 
-               position="0 1.6 -4" 
-               width="3" height="2"></a-image>
+      <a-image id="linkImage" src="./img/YasakaShrine.jpg" 
+               position="-4.25 0.5 -4.8" 
+               width="2.5" height="1.5">
+      </a-image>
+
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-4.25 -2.5 -4.8">
+      </a-cone>
+      
+      <a-image src="../img/map1.jpg" 
+               rotation="-90 0 0"
+               position="0 -3 -3" 
+               width="10" height="10">
+      </a-image>
+
+      <a-text
+      value="八坂神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-4.8 2 -4.8"
+      color="#000">
+      </a-text>
+
+      <!-- <a-plane position="-4.25 2 -4.8"  rotation="0 0 0" width="1" height="0.5" color="#FFF">
+        <a-text value="八坂神社" align="center" color="#000" width="4" font="noto-sans-cjk-jp-msdf.json" font-image="noto-sans-cjk-jp-msdf.png"></a-text>
+      </a-plane> -->
 
       <!-- スクリプト -->
       <script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>YasakaShrine VR</title>
+    <meta name="description" content="360° Image - A-Frame">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- 360度画像の背景 -->
+        <a-sky src="../img_360/YasakaShrine5_360.jpg" rotation="0 -90 0"></a-sky>
+
+        <!-- カメラとカーソルの設定 -->
+        <a-entity camera look-controls>
+            <!-- カーソル設定 -->
+            <a-entity cursor="fuse: true;" 
+                      position="0 0 -1"
+                      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                      material="color: blue; shader: flat">
+            </a-entity>
+        </a-entity>
+
+        <a-text
+            value="奥へ"
+            font="../noto-sans-cjk-jp-msdf.json"
+            font-image="../noto-sans-cjk-jp-msdf.png"
+            negate="false"
+            scale="1 1 1"
+            position="-0.2 2.6 -1.5"
+            color="#000">
+        </a-text>
+
+        <a-text
+            value="戻る"
+            font="../noto-sans-cjk-jp-msdf.json"
+            font-image="../noto-sans-cjk-jp-msdf.png"
+            negate="false"
+            scale="1 1 1"
+            position="0.2 2.6 1.5"
+            rotation="0 180 0"
+            color="#000">
+        </a-text>
+
+        <!-- 球体を使ったリンク -->
+        <a-sphere   id="linkSphere" src="../rf/YasakaShrine6_rf.jpg"
+                    position="0 1.6 -1.5"
+                    radius="0.6" color="#FFF"
+                    material="opacity: 0.6;">
+        </a-sphere>
+
+        <a-sphere   id="linkSphere2" src="../rf/YasakaShrine4_rf.jpg"
+                    position="0 1.6 1.5"
+                    radius="0.6" color="#FFF"
+                    material="opacity: 0.6;">
+        </a-sphere>
+
+        <!-- スクリプト -->
+        <script>
+            // 画像を見つめたときにページ移動するイベント
+            document.querySelector('#linkSphere').addEventListener('click', function () {
+                window.location.href = "./YasakaShrine6.html";
+            });
+
+            document.querySelector('#linkSphere2').addEventListener('click', function () {
+                window.location.href = "./YasakaShrine4.html";
+            });
+        </script>
+    </a-scene>
+</body>
+</html>
