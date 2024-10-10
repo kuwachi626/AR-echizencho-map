@@ -35,6 +35,16 @@
                 width="2.5" height="1.5">
       </a-image>
 
+      <a-image  id="linkImageKirin" src="./rf/kirinPark_rf.jpg" 
+                position="-2.8 0.5 -7.8"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <a-image  id="linkImageToubu" src="./rf/toubu1_rf.jpg" 
+                position="-0.5 0.5 -4.5"
+                width="2.5" height="1.5">
+      </a-image>
+
       <a-image id="linkImageYasaka" src="./img/YasakaShrine.jpg" 
                position="-6.65 0.5 -12.1" 
                width="2.5" height="1.5">
@@ -55,6 +65,21 @@
                 width="2.5" height="1.5">
       </a-image>
 
+      <a-image  id="linkImageKasuga" src="./rf/KasugaShrine_rf.jpg" 
+                position="-0.3 0.5 -2.8"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <a-image  id="linkImageHiyosi" src="./img/HiyosiShrine.jpg" 
+                position="-4.47 0.5 -7"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <a-image  id="linkImageHakusanNisitanaka" src="./img/Hakusan(nisitanaka)Shrine.jpg" 
+                position="-3.9 0.5 -6.5"
+                width="2.5" height="1.5">
+      </a-image>
+
       <!-- ハニー公園 -->
       <a-cone color = "tomato"  
               radius-bottom = "0"  
@@ -67,6 +92,20 @@
               radius-bottom = "0"  
               radius-top = "0.3"
               position="-7.5 -2.5 -4.55">
+      </a-cone>
+
+      <!-- キリン公園 -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-2.8 -2.5 -7.8">
+      </a-cone>
+
+      <!-- 東部第1公園 -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-0.5 -2.5 -4.5">
       </a-cone>
 
       <!-- 八坂神社 -->
@@ -96,6 +135,27 @@
               radius-top = "0.3"
               position="-5.1 -2.5 -15">
       </a-cone>
+
+      <!-- 春日神社 -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-0.3 -2.5 -2.8">
+      </a-cone>
+
+      <!-- 日吉神社 -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-4.47 -2.5 -7">
+      </a-cone>
+
+      <!-- 白山神社（西田中） -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-3.9 -2.5 -6.5">
+      </a-cone>
       
       <a-image src="./img/map.png" 
                rotation="-90 0 0"
@@ -120,6 +180,26 @@
       negate="false"
       scale="1.5 1.5 1"
       position="-8.15 2 -4.55"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="キリン公園"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-3.65 2 -7.8"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="東部第1公園"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-1.4 2 -4.5"
       color="#000">
       </a-text>
 
@@ -163,6 +243,36 @@
       color="#000">
       </a-text>
 
+      <a-text
+      value="春日神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-1 2 -2.8"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="日吉神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-5.15 2 -7"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="白山神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-4.55 2 -6.5"
+      color="#000">
+      </a-text>
+
       <!-- <a-plane position="-4.25 2 -4.8"  rotation="0 0 0" width="1" height="0.5" color="#FFF">
         <a-text value="八坂神社" align="center" color="#000" width="4" font="noto-sans-cjk-jp-msdf.json" font-image="noto-sans-cjk-jp-msdf.png"></a-text>
       </a-plane> -->
@@ -177,6 +287,14 @@
 
           document.querySelector('#linkImageKohun').addEventListener('click', function () {
               window.location.href = "./VR/kohunPark1.html";
+          });
+
+          document.querySelector('#linkImageKirin').addEventListener('click', function () {
+              window.location.href = "./VR/kirinPark.html";
+          });
+
+          document.querySelector('#linkImageToubu').addEventListener('click', function () {
+              window.location.href = "./VR/toubuPark1.html";
           });
 
           document.querySelector('#linkImageYasaka').addEventListener('click', function () {
@@ -195,6 +313,17 @@
               window.location.href = "./VR/kumanoShrine.html";
           });
 
+        //   document.querySelector('#linkImageKasuga').addEventListener('click', function () {
+        //       window.location.href = "./VR/kasugaShrine.html";
+        //   });
+
+          document.querySelector('#linkImageHiyosi').addEventListener('click', function () {
+              window.location.href = "./VR/hiyosiShrine.html";
+          });
+
+          document.querySelector('#linkImageHakusanNisitanaka').addEventListener('click', function () {
+              window.location.href = "./VR/hakusanShrineNisitanaka.html";
+          });
 
           // document.querySelector('#shrine-model').addEventListener('click', function () {
           //     window.location.href = "./AR/YasakaShrine.html";
