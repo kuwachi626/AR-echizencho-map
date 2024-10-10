@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>YasakaShrine VR</title>
+    <title>HaniPark VR</title>
     <meta name="description" content="360° Image - A-Frame">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
@@ -21,16 +21,6 @@
             </a-entity>
         </a-entity>
 
-        <!-- <a-text
-            value="奥へ"
-            font="../noto-sans-cjk-jp-msdf.json"
-            font-image="../noto-sans-cjk-jp-msdf.png"
-            negate="false"
-            scale="1 1 1"
-            position="-0.2 2.6 -1.5"
-            color="#000">
-        </a-text> -->
-
         <a-text
             value="マップへ"
             font="../noto-sans-cjk-jp-msdf.json"
@@ -42,14 +32,7 @@
             color="#000">
         </a-text>
 
-        <!-- 球体を使ったリンク -->
-        <!-- <a-sphere   id="linkSphere" src="../rf/YasakaShrine2_rf.jpg"
-                    position="0 1.6 -1.5"
-                    radius="0.6" color="#FFF"
-                    material="opacity: 0.6;">
-        </a-sphere> -->
-
-        <a-sphere   id="linkSphere2"
+        <a-sphere   id="linkSphereMap"
                     position="0 1.6 1.5"
                     radius="0.6" color="#FFF"
                     material="opacity: 0.6;">
@@ -57,12 +40,7 @@
 
         <!-- スクリプト -->
         <script>
-            // 画像を見つめたときにページ移動するイベント
-            // document.querySelector('#linkSphere').addEventListener('click', function () {
-            //     window.location.href = "./YasakaShrine2.html";
-            // });
-
-            document.querySelector('#linkSphere2').addEventListener('click', function () {
+            document.querySelector('#linkSphereMap').addEventListener('click', function () {
                 window.location.href = "../index.html";
             });
         </script>

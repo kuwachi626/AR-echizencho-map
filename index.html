@@ -24,43 +24,84 @@
       <a-entity  id="shrine-model" gltf-model="#base" position="-4.25 -3.3 -4.6" scale="0.5 0.5 0.5" rotation="0 90 0"></a-entity> -->
 
       <!-- 写真を使ったリンク -->
-      <a-image id="linkImage" src="./img/YasakaShrine.jpg" 
-               position="-4.25 0.5 -4.8" 
-               width="2.5" height="1.5">
-      </a-image>
 
-      <a-image  id="linkImage2" src="./img/hani.jpg" 
-                position="1.6 0.5 -0.3"
+      <a-image  id="linkImageHani" src="./img/hani.jpg" 
+                position="1.7 0.5 -6.85"
                 width="2.5" height="1.5">
       </a-image>
 
+      <a-image  id="linkImageKohun" src="./img/KofunPark.jpg" 
+                position="-7.5 0.5 -4.55"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <a-image id="linkImageYasaka" src="./img/YasakaShrine.jpg" 
+               position="-6.65 0.5 -12.1" 
+               width="2.5" height="1.5">
+      </a-image>
+
+      <a-image  id="linkImageInari" src="./img/InariShrine.jpg" 
+                position="3.3 0.5 -12.85"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <a-image  id="linkImageKehi" src="./img/KehiShrine.jpg" 
+                position="2.8 0.5 -8"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <a-image  id="linkImageKumano" src="./img/KumanoShrine.jpg" 
+                position="-5.1 0.5 -15"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <!-- ハニー公園 -->
       <a-cone color = "tomato"  
               radius-bottom = "0"  
               radius-top = "0.3"
-              position="-4.25 -2.5 -4.8">
+              position="1.7 -2.5 -6.85">
       </a-cone>
 
+      <!-- 古墳公園 -->
       <a-cone color = "tomato"  
-        radius-bottom = "0"  
-        radius-top = "0.3"
-        position="1.6 -2.5 -0.3">
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-7.5 -2.5 -4.55">
+      </a-cone>
+
+      <!-- 八坂神社 -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-6.65 -2.5 -12.1">
+      </a-cone>
+
+      <!-- 稲荷神社 -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="3.3 -2.5 -12.85">
+      </a-cone>
+
+      <!-- 気比神社 -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="2.8 -2.5 -8">
+      </a-cone>
+
+      <!-- 熊野神社 -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-5.1 -2.5 -15">
       </a-cone>
       
-      <a-image src="./img/map1.jpg" 
+      <a-image src="./img/map.png" 
                rotation="-90 0 0"
                position="0 -3 -3" 
-               width="10" height="10">
+               width="30" height="30">
       </a-image>
-
-      <a-text
-      value="八坂神社"
-      font="noto-sans-cjk-jp-msdf.json"
-      font-image="noto-sans-cjk-jp-msdf.png"
-      negate="false"
-      scale="1.5 1.5 1"
-      position="-4.8 2 -4.8"
-      color="#000">
-      </a-text>
 
       <a-text
       value="ハニー公園"
@@ -68,7 +109,57 @@
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="0.8 2 -0.3"
+      position="0.9 2 -6.85"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="古墳公園"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-8.15 2 -4.55"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="八坂神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-7.3 2 -12.1"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="稲荷神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="2.6 2 -12.85"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="気比神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="2.1 2 -8"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="熊野神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-5.8 2 -15"
       color="#000">
       </a-text>
 
@@ -79,13 +170,31 @@
       <!-- スクリプト -->
       <script>
           // 画像を見つめたときにページ移動するイベント
-          document.querySelector('#linkImage').addEventListener('click', function () {
+          
+          document.querySelector('#linkImageHani').addEventListener('click', function () {
+              window.location.href = "./VR/hani.html";
+          });
+
+          document.querySelector('#linkImageKohun').addEventListener('click', function () {
+              window.location.href = "./VR/kohunPark1.html";
+          });
+
+          document.querySelector('#linkImageYasaka').addEventListener('click', function () {
               window.location.href = "./VR/YasakaShrine1.html";
           });
 
-          document.querySelector('#linkImage2').addEventListener('click', function () {
-              window.location.href = "./VR/hani.html";
+          document.querySelector('#linkImageInari').addEventListener('click', function () {
+              window.location.href = "./VR/InariShrine.html";
           });
+
+          document.querySelector('#linkImageKehi').addEventListener('click', function () {
+              window.location.href = "./VR/KehiShrine.html";
+          });
+
+          document.querySelector('#linkImageKumano').addEventListener('click', function () {
+              window.location.href = "./VR/kumanoShrine.html";
+          });
+
 
           // document.querySelector('#shrine-model').addEventListener('click', function () {
           //     window.location.href = "./AR/YasakaShrine.html";
