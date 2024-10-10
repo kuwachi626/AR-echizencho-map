@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>HakusanShrine VR</title>
+    <title>越前町マップ</title>
     <meta name="description" content="360° Image - A-Frame">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
@@ -77,6 +77,21 @@
 
       <a-image  id="linkImageHakusanNisitanaka" src="./img/Hakusan(nisitanaka)Shrine.jpg" 
                 position="-3.9 0.5 -6.5"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <a-image  id="linkImageHakusanTanaka" src="./img/Hakusan(tanaka)Shrine.jpg" 
+                position="5.63 0.5 -13.4"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <a-image  id="linkImageHakusanHousenzi" src="./img/HakusanShrine(housenzi).jpg" 
+                position="-6.55 0.5 -8.4"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <a-image  id="linkImageYahataAsahi" src="./img/YahataShrine(asahi).jpg" 
+                position="-6.8 0.5 -4.1"
                 width="2.5" height="1.5">
       </a-image>
 
@@ -155,6 +170,41 @@
               radius-bottom = "0"  
               radius-top = "0.3"
               position="-3.9 -2.5 -6.5">
+      </a-cone>
+
+      <!-- 白山神社（田中） -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="5.63 -2.5 -13.4">
+      </a-cone>
+
+      <!-- 白山神社（宝泉寺） -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-6.55 -2.5 -8.4">
+      </a-cone>
+
+      <!-- 八幡神社（朝日） -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-6.8 -2.5 -4.1">
+      </a-cone>
+
+      <!-- 八幡神社（岩開） -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-6.1 -2.5 1.2">
+      </a-cone>
+
+      <!-- 佐々牟志神社 -->
+      <a-cone color = "tomato"  
+              radius-bottom = "0"  
+              radius-top = "0.3"
+              position="-6.4 -2.5 7.8">
       </a-cone>
       
       <a-image src="./img/map.png" 
@@ -273,6 +323,56 @@
       color="#000">
       </a-text>
 
+      <a-text
+      value="白山神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="4.9 2 -13.4"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="白山神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-7.2 2 -8.4"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="八幡神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-7.5 2 -4.1"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="八幡神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-6.1 2 1.2"
+      color="#000">
+      </a-text>
+
+      <a-text
+      value="佐々牟志神社"
+      font="noto-sans-cjk-jp-msdf.json"
+      font-image="noto-sans-cjk-jp-msdf.png"
+      negate="false"
+      scale="1.5 1.5 1"
+      position="-6.4 2 7.8"
+      color="#000">
+      </a-text>
+
       <!-- <a-plane position="-4.25 2 -4.8"  rotation="0 0 0" width="1" height="0.5" color="#FFF">
         <a-text value="八坂神社" align="center" color="#000" width="4" font="noto-sans-cjk-jp-msdf.json" font-image="noto-sans-cjk-jp-msdf.png"></a-text>
       </a-plane> -->
@@ -323,6 +423,18 @@
 
           document.querySelector('#linkImageHakusanNisitanaka').addEventListener('click', function () {
               window.location.href = "./VR/hakusanShrineNisitanaka.html";
+          });
+
+          document.querySelector('#linkImageHakusanTanaka').addEventListener('click', function () {
+              window.location.href = "./VR/hakusanShrineTanaka.html";
+          });
+
+          document.querySelector('#linkImageHakusanHousenzi').addEventListener('click', function () {
+              window.location.href = "./VR/hakusanShrineHousenzi.html";
+          });
+
+          document.querySelector('#linkImageYahataAsahi').addEventListener('click', function () {
+              window.location.href = "./VR/yahataShrineAsahi.html";
           });
 
           // document.querySelector('#shrine-model').addEventListener('click', function () {
