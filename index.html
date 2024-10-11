@@ -5,11 +5,12 @@
     <title>越前町マップ</title>
     <meta name="description" content="360° Image - A-Frame">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="main.js"></script>
 </head>
   <body>
     <a-scene id="scene" background="color: #4080e0" renderer="colorManagement: true">
         <!-- カメラとカーソルの設定 -->
-        <a-entity camera look-controls wasd-controls>
+        <a-entity id="camera" camera look-controls wasd-controls>
           <!-- カーソル設定 -->
           <a-entity cursor="fuse: true;" 
                     position="0 0 -1"
@@ -25,83 +26,100 @@
 
       <!-- 写真を使ったリンク -->
 
-      <a-image  id="linkImageHani" src="./img/hani.jpg" 
+      <a-image  id="linkImageHani" 
+                camera-look
+                src="./img/hani.jpg" 
                 position="1.7 0.5 -6.85"
                 width="2.5" height="1.5"
                 look-at="#camera">
       </a-image>
 
       <a-image  id="linkImageKohun" src="./img/KofunPark.jpg" 
+                camera-look
                 position="-7.5 0.5 -4.55"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageKirin" src="./rf/kirinPark_rf.jpg" 
+                camera-look
                 position="-2.8 0.5 -7.8"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageToubu" src="./rf/toubu1_rf.jpg" 
+                camera-look
                 position="-0.5 0.5 -4.5"
                 width="2.5" height="1.5">
       </a-image>
 
-      <a-image id="linkImageYasaka" src="./img/YasakaShrine.jpg" 
-               position="-6.65 0.5 -12.1" 
-               width="2.5" height="1.5">
+      <a-image  id="linkImageYasaka" src="./img/YasakaShrine.jpg" 
+                camera-look
+                position="-6.65 0.5 -12.1" 
+                width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageInari" src="./img/InariShrine.jpg" 
+                camera-look
                 position="3.3 0.5 -12.85"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageKehi" src="./img/KehiShrine.jpg" 
+                camera-look
                 position="2.8 0.5 -8"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageKumano" src="./img/KumanoShrine.jpg" 
+                camera-look
                 position="-5.1 0.5 -15"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageKasuga" src="./rf/KasugaShrine_rf.jpg" 
+                camera-look
                 position="-0.3 0.5 -2.8"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageHiyosi" src="./img/HiyosiShrine.jpg" 
+                camera-look
                 position="-4.47 0.5 -7"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageHakusanNisitanaka" src="./img/Hakusan(nisitanaka)Shrine.jpg" 
+                camera-look
                 position="-3.9 0.5 -6.5"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageHakusanTanaka" src="./img/Hakusan(tanaka)Shrine.jpg" 
+                camera-look
                 position="5.63 0.5 -13.4"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageHakusanHousenzi" src="./img/HakusanShrine(housenzi).jpg" 
+                camera-look
                 position="-6.55 0.5 -8.4"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageYahataAsahi" src="./img/YahataShrine(asahi).jpg" 
+                camera-look
                 position="-6.8 0.5 -4.1"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageYahataIwakai" src="./img/YahataShrine(iwakai).jpg" 
+                camera-look
                 position="-6.1 0.5 1.2"
                 width="2.5" height="1.5">
       </a-image>
 
       <a-image  id="linkImageSasamusi" src="./img/SasamusiShrine.jpg" 
+                camera-look
                 position="-6.4 0.5 7.8"
                 width="2.5" height="1.5">
       </a-image>
@@ -225,163 +243,211 @@
       </a-image>
 
       <a-text
+      camera-look
       value="ハニー公園"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="0.9 2 -6.85"
-      color="#000">
+      position="1.7 2 -6.85"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="古墳公園"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-8.15 2 -4.55"
-      color="#000">
+      position="-7.5 2 -4.55"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="キリン公園"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-3.65 2 -7.8"
-      color="#000">
+      position="-2.8 2 -7.8"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="東部第1公園"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-1.4 2 -4.5"
-      color="#000">
+      position="-0.5 2 -4.5"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="八坂神社"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-7.3 2 -12.1"
-      color="#000">
+      position="-6.65 2 -12.1"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="稲荷神社"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="2.6 2 -12.85"
-      color="#000">
+      position="3.3 2 -12.85"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="気比神社"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="2.1 2 -8"
-      color="#000">
+      position="2.8 2 -8"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="熊野神社"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-5.8 2 -15"
-      color="#000">
+      position="-5.1 2 -15"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="春日神社"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-1 2 -2.8"
-      color="#000">
+      position="-0.3 2 -2.8"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="日吉神社"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-5.15 2 -7"
-      color="#000">
+      position="-4.47 2 -7"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="白山神社"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-4.55 2 -6.5"
-      color="#000">
+      position="-3.9 2 -6.5"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="白山神社"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="4.9 2 -13.4"
-      color="#000">
+      position="5.63 2 -13.4"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="白山神社"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-7.2 2 -8.4"
-      color="#000">
+      position="-6.55 2 -8.4"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="八幡神社"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-7.5 2 -4.1"
-      color="#000">
+      position="-6.8 2 -4.1"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="八幡神社"
       font="noto-sans-cjk-jp-msdf.json"
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-6.8 2 1.2"
-      color="#000">
+      position="-6.1 2 1.2"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <a-text
+      camera-look
       value="佐々牟志神社"
       font="NotoSansCJKjp-Regular-msdf.json"
       font-image="NotoSansCJKjp-Regular.png"
       negate="false"
       scale="2.5 2.5 1"
-      position="-7.3 2 7.8"
-      color="#000">
+      position="-6.4 2 7.8"
+      color="#000"
+      anchor="center" 
+      align="center">
       </a-text>
 
       <!-- <a-plane position="-4.25 2 -4.8"  rotation="0 0 0" width="1" height="0.5" color="#FFF">
@@ -424,9 +490,9 @@
               window.location.href = "./VR/kumanoShrine.html";
           });
 
-        //   document.querySelector('#linkImageKasuga').addEventListener('click', function () {
-        //       window.location.href = "./VR/kasugaShrine.html";
-        //   });
+          document.querySelector('#linkImageKasuga').addEventListener('click', function () {
+              window.location.href = "./VR/kasugaShrine.html";
+          });
 
           document.querySelector('#linkImageHiyosi').addEventListener('click', function () {
               window.location.href = "./VR/hiyosiShrine.html";
