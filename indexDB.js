@@ -13,27 +13,9 @@ const imagePaths = [
     "img/YahataShrine(asahi).jpg",
     "img/YahataShrine(iwakai).jpg",
     "img/YasakaShrine.jpg",
-    "rf/hani_rf.jpg",
     "rf/KasugaShrine_rf.jpg",
     "rf/kirinPark_rf.jpg",
-    "rf/KohunPark1_rf.jpg",
-    "rf/KohunPark2_rf.jpg",
-    "rf/KohunPark3_rf.jpg",
-    "rf/KohunPark4_rf.jpg",
-    "rf/sasamusiShrine1_rf.jpg",
-    "rf/sasamusiShrine2_rf.jpg",
-    "rf/sasamusiShrine3_rf.jpg",
-    "rf/toubu1_rf.jpg",
-    "rf/toubu2_rf.jpg",
-    "rf/YahataShrine(iwakai)1_rf.jpg",
-    "rf/YahataShrine(iwakai)2_rf.jpg",
-    "rf/YahataShrine(iwakai)3_rf.jpg",
-    "rf/YasakaShrine1_rf.jpg",
-    "rf/YasakaShrine2_rf.jpg",
-    "rf/YasakaShrine3_rf.jpg",
-    "rf/YasakaShrine4_rf.jpg",
-    "rf/YasakaShrine5_rf.jpg",
-    "rf/YasakaShrine6_rf.jpg",
+    "rf/toubu1_rf.jpg"
 ];
 
 // IndexedDBの初期化
