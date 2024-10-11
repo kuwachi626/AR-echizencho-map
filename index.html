@@ -27,7 +27,8 @@
 
       <a-image  id="linkImageHani" src="./img/hani.jpg" 
                 position="1.7 0.5 -6.85"
-                width="2.5" height="1.5">
+                width="2.5" height="1.5"
+                look-at="#camera">
       </a-image>
 
       <a-image  id="linkImageKohun" src="./img/KofunPark.jpg" 
@@ -92,6 +93,16 @@
 
       <a-image  id="linkImageYahataAsahi" src="./img/YahataShrine(asahi).jpg" 
                 position="-6.8 0.5 -4.1"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <a-image  id="linkImageYahataIwakai" src="./img/YahataShrine(iwakai).jpg" 
+                position="-6.1 0.5 1.2"
+                width="2.5" height="1.5">
+      </a-image>
+
+      <a-image  id="linkImageSasamusi" src="./img/SasamusiShrine.jpg" 
+                position="-6.4 0.5 7.8"
                 width="2.5" height="1.5">
       </a-image>
 
@@ -359,17 +370,17 @@
       font-image="noto-sans-cjk-jp-msdf.png"
       negate="false"
       scale="1.5 1.5 1"
-      position="-6.1 2 1.2"
+      position="-6.8 2 1.2"
       color="#000">
       </a-text>
 
       <a-text
       value="佐々牟志神社"
-      font="noto-sans-cjk-jp-msdf.json"
-      font-image="noto-sans-cjk-jp-msdf.png"
+      font="NotoSansCJKjp-Regular-msdf.json"
+      font-image="NotoSansCJKjp-Regular.png"
       negate="false"
-      scale="1.5 1.5 1"
-      position="-6.4 2 7.8"
+      scale="2.5 2.5 1"
+      position="-7.3 2 7.8"
       color="#000">
       </a-text>
 
@@ -435,6 +446,14 @@
 
           document.querySelector('#linkImageYahataAsahi').addEventListener('click', function () {
               window.location.href = "./VR/yahataShrineAsahi.html";
+          });
+
+          document.querySelector('#linkImageYahataIwakai').addEventListener('click', function () {
+              window.location.href = "./VR/yahataShrineIwakai1.html";
+          });
+
+          document.querySelector('#linkImageSasamusi').addEventListener('click', function () {
+              window.location.href = "./VR/sasamusiShrine1.html";
           });
 
           // document.querySelector('#shrine-model').addEventListener('click', function () {
